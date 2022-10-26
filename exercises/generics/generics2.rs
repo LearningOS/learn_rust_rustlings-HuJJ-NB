@@ -3,14 +3,16 @@
 
 // Execute `rustlings hint generics2` for hints!
 
-// I AM NOT DONE
+// # I AM NOT DONE
 
-struct Wrapper {
-    value: u32,
+use std::iter::Copied;
+
+struct Wrapper<T> {
+    value: T,
 }
 
-impl Wrapper {
-    pub fn new(value: u32) -> Self {
+impl<T: Copy> Wrapper<T> {
+    pub fn new(value: T) -> Self {
         Wrapper { value }
     }
 }
